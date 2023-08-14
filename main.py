@@ -1,4 +1,6 @@
-# input("What city where you born in?\n")
-# input("What is the name of your childhood pet?\n")
+print("Welcome to my amazing band name generator.")
 
-name = input("What is your name? ")
+city = input("What city where you born in?\n")
+pet = input("What is the name of your childhood pet?\n")
+
+print("Your band name could be " + city + " " + pet + "!")
