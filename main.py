@@ -24,5 +24,5 @@
 print("Welcome to the BMI calculator.")
 height = float(input("Enter your height(m) "))
 weight = float(input("Enter your weight(kg) "))
-bmiStr = str(weight / height ** 2)
+bmiStr = str(int(weight / height ** 2))
 print(bmiStr + " is your BMI.")
