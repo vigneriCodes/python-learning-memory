@@ -32,15 +32,11 @@
 
 
 print("Your life in weeks.")
-
 age = int(input("What is your current age?\n"))
-
 years_remaining = 90 - age
-
 days_left = years_remaining * 365
 weeks_left = years_remaining * 52
 months_left = years_remaining * 12
-
 print(f"You have {days_left} days left")
 print(f"You have {weeks_left} weeks left")
 print(f"You have {months_left} months left")
