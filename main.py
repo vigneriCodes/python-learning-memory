@@ -11,6 +11,9 @@
 
 # ------------------
 
+# h = 1.778
+# w = 91
+
 # print("Welcome to the BMI calculator.")
 # height = float(input("Enter your height(m) "))
 # weight = float(input("Enter your weight(kg) "))
@@ -40,12 +43,40 @@
 # print(f"Each person should pay ${str(result)}")
 
 # ------------------
-print("Welcome to Odd or Even")
-print("I can tell you if a number is even or...odd...")
-userNum = int(input("Enter a whole number "))
-if (userNum % 2 == 0):
-    print(f"{userNum} is an even number.")
+
+# print("Welcome to Odd or Even")
+# print("I can tell you if a number is even or...odd...")
+# userNum = int(input("Enter a whole number "))
+# if (userNum % 2 == 0):
+#     print(f"{userNum} is an even number.")
+# else:
+#     print(f"{userNum} is an odd number")
+
+# ------------------
+
+# h = 1.778
+# w = 91
+
+print("Welcome to BMI calculator v2.0.1")
+height = float(input("Enter your height(m) "))
+weight = float(input("Enter your weight(kg) "))
+
+bmi = round(weight / height ** 2, 1)
+bmiStr = str(bmi)
+weightClass = ""
+
+if (bmi < 18.5):
+    weightClass = "underwight"
+elif (bmi < 25):
+    weightClass = "normal weight"
+elif (bmi < 30):
+    weightClass = "overweight"
+elif (bmi < 35):
+    weightClass = "obese"
 else:
-    print(f"{userNum} is an odd number")
+    weightClass = "clinically obese"
+
+print(f"{bmi} is your BMI. Your weight is classified as: {weightClass}")
+
 
 # ------------------
