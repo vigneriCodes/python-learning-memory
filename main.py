@@ -160,11 +160,15 @@ if (choice1 == "left"):
     if (choice2 == "wait"):
         choice3 = input("While waiting on the pier, three doors appear in front of you. One blue, one red, and one yellow. You feel compelled to enter one of them. Which door will you enter; 'blue' 'red' or 'yellow'?\n").lower()
         if (choice3 == "yellow"):
-            print("Wow! What an adventure. You win!?")
+            print("Wow! You found the treasure. What an adventure. You win!?")
+        elif (choice3 == "red"):
+            print("Wrong door. It leads to a room full of fire. You're dead. Game Over.")
+        elif (choice3 == "blue"):
+            print("Wrong door. An immense volume of water rushes out of the door and knocks you into the lake. The Gator eats you. Game Over")
         else:
-            print("Wrong door. You're dead. Game Over.")
+            print("That wasn't even one of your choices! Game Over.")
     else:
-        print("You've been eaten by a big ol Florida Gator. Game Over.")
+        print("You've been eaten by a big ol' Gator. Game Over.")
 else:
     print("You fell into a hole. Game Over.")
 
