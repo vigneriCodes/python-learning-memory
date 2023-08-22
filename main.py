@@ -150,8 +150,8 @@
 
 # ------------------
 
-print("Welcome to Treasure Island!")
-print("Your mission is to find the treasure")
+print("Welcome to Treasure Island!?")
+print("Your mission is to find the treasure?")
 choice1 = input(
     "You are walking along a wooded trail. You come to a crossorads. Which direction do you choose; 'left' or 'right'?)\n").lower()
 if (choice1 == "left"):
