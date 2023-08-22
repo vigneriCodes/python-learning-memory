@@ -76,17 +76,42 @@
 
 # ------------------
 
-print("Welcome to: IsLeapYear?")
-inputYear = int(input("Please enter a four digit year\n"))
-if (inputYear % 4 == 0):
-    if (inputYear % 100 == 0):
-        if (inputYear % 400 == 0):
-            print("Leap!")
-        else:
-            print("Not Leap")
-    else:
-        print("Leap")
-else:
-    print("Not Leap")
+# print("Welcome to: IsLeapYear?")
+# inputYear = int(input("Please enter a four digit year\n"))
+# if (inputYear % 4 == 0):
+#     if (inputYear % 100 == 0):
+#         if (inputYear % 400 == 0):
+#             print("Leap!")
+#         else:
+#             print("Not Leap")
+#     else:
+#         print("Leap")
+# else:
+#     print("Not Leap")
 
 # ------------------
+
+print("Welcome to Giancarlo's Python Pizza")
+print("Prices: Small-$15 / Medium-$20 / Large-$25")
+user_pizza_size = input(
+    "What size pizza would you like? (S/M/L)\n").upper()
+add_pepperoni = input("Do you want pepperoni? (S+$2 M/L+$3) Y or N\n").upper()
+extra_cheese = input(
+    "Would you like to add extra cheese? (+$3) Y or N\n").upper()
+final_bill = 0
+if (user_pizza_size == "S"):
+    final_bill += 15
+elif (user_pizza_size == "M"):
+    final_bill += 20
+elif (user_pizza_size == "L"):
+    final_bill += 25
+else:
+    print("That is NOT a valid pizza size. Do you even want pizza?")
+if (add_pepperoni == "Y"):
+    if (user_pizza_size == "S"):
+        final_bill += 2
+    else:
+        final_bill += 3
+if (extra_cheese == "Y"):
+    final_bill += 3
+print(f"Your final bill is ${final_bill}")
