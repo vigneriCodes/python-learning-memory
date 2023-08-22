@@ -91,27 +91,61 @@
 
 # ------------------
 
-print("Welcome to Giancarlo's Python Pizza")
-print("Prices: Small-$15 / Medium-$20 / Large-$25")
-user_pizza_size = input(
-    "What size pizza would you like? (S/M/L)\n").upper()
-add_pepperoni = input("Do you want pepperoni? (S+$2 M/L+$3) Y or N\n").upper()
-extra_cheese = input(
-    "Would you like to add extra cheese? (+$3) Y or N\n").upper()
-final_bill = 0
-if (user_pizza_size == "S"):
-    final_bill += 15
-elif (user_pizza_size == "M"):
-    final_bill += 20
-elif (user_pizza_size == "L"):
-    final_bill += 25
+# print("Welcome to Giancarlo's Python Pizza")
+# print("Prices: Small-$15 / Medium-$20 / Large-$25")
+# user_pizza_size = input(
+#     "What size pizza would you like? (S/M/L)\n").upper()
+# add_pepperoni = input("Do you want pepperoni? (S+$2 M/L+$3) Y or N\n").upper()
+# extra_cheese = input(
+#     "Would you like to add extra cheese? (+$3) Y or N\n").upper()
+# final_bill = 0
+# if (user_pizza_size == "S"):
+#     final_bill += 15
+# elif (user_pizza_size == "M"):
+#     final_bill += 20
+# elif (user_pizza_size == "L"):
+#     final_bill += 25
+# else:
+#     print("That is NOT a valid pizza size. Do you even want pizza?")
+# if (add_pepperoni == "Y"):
+#     if (user_pizza_size == "S"):
+#         final_bill += 2
+#     else:
+#         final_bill += 3
+# if (extra_cheese == "Y"):
+#     final_bill += 3
+# print(f"Your final bill is ${final_bill}")
+
+# ------------------
+
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name?\n").lower()
+name2 = input("What is their name?\n").lower()
+names = name1 + name2
+t_str = "true"
+l_str = "love"
+score1 = 0
+score2 = 0
+
+for letter in names:
+    if letter in t_str:
+        score1 += 1
+for letter in names:
+    if letter in l_str:
+        score2 += 1
+# for letter in t_str:
+#     score1 += names.count(letter)
+# for letter in l_str:
+#     score2 += names.count(letter)
+
+total_score = int(str(score1) + str(score2))
+
+if (total_score <= 50 and total_score >= 40):
+    print(f"Your score is {total_score}, you are alright together.")
+elif (total_score < 10 or total_score > 90):
+    print(
+        f"Your score is {total_score}, you go together like coke and mentos.")
 else:
-    print("That is NOT a valid pizza size. Do you even want pizza?")
-if (add_pepperoni == "Y"):
-    if (user_pizza_size == "S"):
-        final_bill += 2
-    else:
-        final_bill += 3
-if (extra_cheese == "Y"):
-    final_bill += 3
-print(f"Your final bill is ${final_bill}")
+    print(f"Your score is {total_score}.")
+
+# ------------------
