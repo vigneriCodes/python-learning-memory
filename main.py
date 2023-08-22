@@ -31,12 +31,21 @@
 
 # ------------------
 
-print("Welcome to the tip calculator.")
-billTotal = float(input("What was the total bill? $"))
-diners = int(input("How many people split the bill? "))
-tipPercent = 100 + int(input(
-    "What percentage of tip would you like to give 15, 20, or 25? "))
-result = round((billTotal * tipPercent/diners)/100, 2)
-print(f"Each person should pay ${str(result)}")
+# print("Welcome to the tip calculator.")
+# billTotal = float(input("What was the total bill? $"))
+# diners = int(input("How many people split the bill? "))
+# tipPercent = 100 + int(input(
+#     "What percentage of tip would you like to give 15, 20, or 25? "))
+# result = round((billTotal * tipPercent/diners)/100, 2)
+# print(f"Each person should pay ${str(result)}")
+
+# ------------------
+print("Welcome to Odd or Even")
+print("I can tell you if a number is even or...odd...")
+userNum = int(input("Enter a whole number "))
+if (userNum % 2 == 0):
+    print(f"{userNum} is an even number.")
+else:
+    print(f"{userNum} is an odd number")
 
 # ------------------
