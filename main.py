@@ -13,7 +13,6 @@
 
 # h = 1.778
 # w = 91
-
 # print("Welcome to the BMI calculator.")
 # height = float(input("Enter your height(m) "))
 # weight = float(input("Enter your weight(kg) "))
@@ -56,15 +55,12 @@
 
 # h = 1.778
 # w = 91
-
 # print("Welcome to BMI calculator v2.0.1")
 # height = float(input("Enter your height(m) "))
 # weight = float(input("Enter your weight(kg) "))
-
 # bmi = round(weight / height ** 2, 1)
 # bmiStr = str(bmi)
 # weightClass = ""
-
 # if (bmi < 18.5):
 #     weightClass = "underwight"
 # elif (bmi < 25):
@@ -75,7 +71,6 @@
 #     weightClass = "obese"
 # else:
 #     weightClass = "clinically obese"
-
 # print(f"{bmi} is your BMI. Your weight is classified as: {weightClass}")
 
 
@@ -83,7 +78,6 @@
 
 print("Welcome to: IsLeapYear?")
 inputYear = int(input("Please enter a four digit year\n"))
-
 if (inputYear % 4 == 0):
     if (inputYear % 100 == 0):
         if (inputYear % 400 == 0):
@@ -94,3 +88,5 @@ if (inputYear % 4 == 0):
         print("Leap")
 else:
     print("Not Leap")
+
+# ------------------
