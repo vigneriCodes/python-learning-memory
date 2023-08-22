@@ -118,34 +118,59 @@
 
 # ------------------
 
-print("Welcome to the Love Calculator!")
-name1 = input("What is your name?\n").lower()
-name2 = input("What is their name?\n").lower()
-names = name1 + name2
-t_str = "true"
-l_str = "love"
-score1 = 0
-score2 = 0
+# print("Welcome to the Love Calculator!")
+# name1 = input("What is your name?\n").lower()
+# name2 = input("What is their name?\n").lower()
+# names = name1 + name2
+# t_str = "true"
+# l_str = "love"
+# score1 = 0
+# score2 = 0
 
-for letter in names:
-    if letter in t_str:
-        score1 += 1
-for letter in names:
-    if letter in l_str:
-        score2 += 1
-# for letter in t_str:
-#     score1 += names.count(letter)
-# for letter in l_str:
-#     score2 += names.count(letter)
+# for letter in names:
+#     if letter in t_str:
+#         score1 += 1
+# for letter in names:
+#     if letter in l_str:
+#         score2 += 1
+# # for letter in t_str:
+# #     score1 += names.count(letter)
+# # for letter in l_str:
+# #     score2 += names.count(letter)
 
-total_score = int(str(score1) + str(score2))
+# total_score = int(str(score1) + str(score2))
 
-if (total_score <= 50 and total_score >= 40):
-    print(f"Your score is {total_score}, you are alright together.")
-elif (total_score < 10 or total_score > 90):
-    print(
-        f"Your score is {total_score}, you go together like coke and mentos.")
+# if (total_score <= 50 and total_score >= 40):
+#     print(f"Your score is {total_score}, you are alright together.")
+# elif (total_score < 10 or total_score > 90):
+#     print(
+#         f"Your score is {total_score}, you go together like coke and mentos.")
+# else:
+#     print(f"Your score is {total_score}.")
+
+# ------------------
+
+print("Welcome to Treasure Island!")
+print("Your mission is to find the treasure")
+choice1 = input(
+    "You are walking along a wooded trail. You come to a crossorads. Which direction do you choose; 'left' or 'right'?)\n").lower()
+if (choice1 == "left"):
+    choice2 = input(
+        "You've chosen the left path. It leads to a pier on the bank of a grand lake. Would you like to 'swim' or 'wait'?\n").lower()
+    if (choice2 == "wait"):
+        choice3 = input("While waiting on the pier, three doors appear in front of you. One blue, one red, and one yellow. You feel compelled to enter one of them. Which door will you enter; 'blue' 'red' or 'yellow'?\n").lower()
+        if (choice3 == "yellow"):
+            print("Wow! What an adventure. You win!?")
+        else:
+            print("Wrong door. You're dead. Game Over.")
+    else:
+        print("You've been eaten by a big ol Florida Gator. Game Over.")
 else:
-    print(f"Your score is {total_score}.")
+    print("You fell into a hole. Game Over.")
 
+# ------------------
+# ------------------
+# ------------------
+# ------------------
+# ------------------
 # ------------------
