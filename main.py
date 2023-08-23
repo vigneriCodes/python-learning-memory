@@ -150,31 +150,71 @@
 
 # ------------------
 
-print("Welcome to Treasure Island!?")
-print("Your mission is to find the treasure?")
-choice1 = input(
-    "You are walking along a wooded trail. You come to a crossorads. Which direction do you choose; 'left' or 'right'?)\n").lower()
-if (choice1 == "left"):
-    choice2 = input(
-        "You've chosen the left path. It leads to a pier on the bank of a grand lake. Would you like to 'swim' or 'wait'?\n").lower()
-    if (choice2 == "wait"):
-        choice3 = input("While waiting on the pier, three doors appear in front of you. One blue, one red, and one yellow. You feel compelled to enter one of them. Which door will you enter; 'blue' 'red' or 'yellow'?\n").lower()
-        if (choice3 == "yellow"):
-            print("Wow! You found the treasure. What an adventure. You win!?")
-        elif (choice3 == "red"):
-            print("Wrong door. It leads to a room full of fire. You're dead. Game Over.")
-        elif (choice3 == "blue"):
-            print("Wrong door. An immense volume of water rushes out of the door and knocks you into the lake. The Gator eats you. Game Over")
-        else:
-            print("That wasn't even one of your choices! Game Over.")
-    else:
-        print("You've been eaten by a big ol' Gator. Game Over.")
-else:
-    print("You fell into a hole. Game Over.")
+# import random
+# print("Welcome to Treasure Island!?")
+# print("Your mission is to find the treasure?")
+# choice1 = input(
+#     "You are walking along a wooded trail. You come to a crossorads. Which direction do you choose; 'left' or 'right'?)\n").lower()
+# if (choice1 == "left"):
+#     choice2 = input(
+#         "You've chosen the left path. It leads to a pier on the bank of a grand lake. Would you like to 'swim' or 'wait'?\n").lower()
+#     if (choice2 == "wait"):
+#         choice3 = input("While waiting on the pier, three doors appear in front of you. One blue, one red, and one yellow. You feel compelled to enter one of them. Which door will you enter; 'blue' 'red' or 'yellow'?\n").lower()
+#         if (choice3 == "yellow"):
+#             print("Wow! You found the treasure. What an adventure. You win!?")
+#         elif (choice3 == "red"):
+#             print("Wrong door. It leads to a room full of fire. You're dead. Game Over.")
+#         elif (choice3 == "blue"):
+#             print("Wrong door. An immense volume of water rushes out of the door and knocks you into the lake. The Gator eats you. Game Over")
+#         else:
+#             print("That wasn't even one of your choices! Game Over.")
+#     else:
+#         print("You've been eaten by a big ol' Gator. Game Over.")
+# else:
+#     print("You fell into a hole. Game Over.")
 
 # ------------------
+
+# import random
+# coin_int = random.randint(0, 1)
+# if coin_int == 0:
+#     print("Heads🧕")
+# else:
+#     print("Tails🦖")
+
 # ------------------
+
+# import random
+# print("Welcome to Banker Roulette!")
+# names_string = input("Enter everyone's name who is playing\n")
+# names = names_string.split(", ")
+# rand_int = random.randint(0, len(names)-1)
+# print(f"{names[rand_int]} is paying the bill. Thanks!")
+
 # ------------------
+
+print("Welcome to the Treasure Map")
+row1 = ["🔲", "🔲", "🔲"]
+row2 = ["🔲", "🔲", "🔲"]
+row3 = ["🔲", "🔲", "🔲"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}\n")
+position = input("Where do you want to put the treasure?\n")
+if int(position) < 11 or int(position) > 33:
+    print("Nope!")
+else:
+    cords = [int(item) for item in position]
+    x_axis = cords[0] - 1
+    y_axis = cords[1] - 1
+    map[y_axis][x_axis] = "X"
+    print(f"{row1}\n{row2}\n{row3}\n")
+
+
 # ------------------
+# ROCK PAPER SCISSORS
+# import random
+# print("Let's play Rock, Paper, Scissors")
+# user_turn = int(input("1,2,3 Shoot! Rock = 1 | Paper = 2 | Scissors = 3"))
+# comp_turn = random.randint(1, 3)
 # ------------------
 # ------------------
