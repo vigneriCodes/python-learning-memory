@@ -193,28 +193,39 @@
 
 # ------------------
 
-print("Welcome to the Treasure Map")
-row1 = ["🔲", "🔲", "🔲"]
-row2 = ["🔲", "🔲", "🔲"]
-row3 = ["🔲", "🔲", "🔲"]
-map = [row1, row2, row3]
-print(f"{row1}\n{row2}\n{row3}\n")
-position = input("Where do you want to put the treasure?\n")
-if int(position) < 11 or int(position) > 33:
-    print("Nope!")
-else:
-    cords = [int(item) for item in position]
-    x_axis = cords[0] - 1
-    y_axis = cords[1] - 1
-    map[y_axis][x_axis] = "X"
-    print(f"{row1}\n{row2}\n{row3}\n")
+# print("Welcome to the Treasure Map")
+# row1 = ["🔲", "🔲" ,"🔲"]
+# row2 = ["🔲", "🔲" ,"🔲"]
+# row3 = ["🔲", "🔲" ,"🔲"]
+# map = [row1, row2, row3]
+# print(f"{row1}\n{row2}\n{row3}\n")
+# position = input("Where do you want to put the treasure?\n")
+# if int(position) < 11 or int(position) > 33:
+#     print("Nope!")
+# else:
+#     cords = [int(item) for item in position]
+#     x_axis = cords[0] - 1
+#     y_axis = cords[1] - 1
+#     map[y_axis][x_axis] = "X"
+#     print(f"{row1}\n{row2}\n{row3}\n")
 
 
 # ------------------
-# ROCK PAPER SCISSORS
-# import random
-# print("Let's play Rock, Paper, Scissors")
-# user_turn = int(input("1,2,3 Shoot! Rock = 1 | Paper = 2 | Scissors = 3"))
-# comp_turn = random.randint(1, 3)
+
+import random
+print("Let's play Rock, Paper, Scissors")
+icons = ["🥌", "🧻", "✂"]
+user_turn = int(input("Rock = 0 | Paper = 1 | Scissors = 2\n"))
+comp_turn = random.randint(0, 2)
+print(f"You: {icons[user_turn]}")
+print(f"Opponent: {icons[comp_turn]}")
+if (user_turn == 0 and comp_turn == 2) or (user_turn == 2 and comp_turn == 1) or (user_turn == 1 and comp_turn == 0):
+    print("You Win!")
+elif (user_turn == comp_turn):
+    print("It's a Draw")
+else:
+    print("You Lose!")
+
+
 # ------------------
 # ------------------
