@@ -228,17 +228,29 @@
 
 # ------------------
 
-high_score = 0
-score_input = input(
-    "Enter some scores (single space between them)\n").split(" ")
-scores = [int(string) for string in score_input]
-# SCORES = [78, 65, 89, 55, 91, 64, 89]
-# for score in SCORES:
-for score in scores:
-    if (score > high_score):
-        high_score = score
-print(f"The highest score of the class is: {high_score}")
+# high_score = 0
+# score_input = input(
+#     "Enter some scores (single space between them)\n").split(" ")
+# scores = [int(string) for string in score_input]
+# # SCORES = [78, 65, 89, 55, 91, 64, 89]
+# # for score in SCORES:
+# for score in scores:
+#     if (score > high_score):
+#         high_score = score
+# print(f"The highest score of the class is: {high_score}")
 
+# ------------------
+
+# sum = 0
+# for number in range(1, 101, 2):
+#     sum += number
+# print(sum)
+
+sum = 0
+for number in range(1, 101):
+    if (number % 2 == 0):
+        sum += number
+print(sum)
 
 # ------------------
 
