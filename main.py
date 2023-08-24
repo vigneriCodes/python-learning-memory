@@ -212,20 +212,69 @@
 
 # ------------------
 
-import random
-print("Let's play Rock, Paper, Scissors")
-icons = ["🥌", "🧻", "✂"]
-user_turn = int(input("Rock = 0 | Paper = 1 | Scissors = 2\n"))
-comp_turn = random.randint(0, 2)
-print(f"You: {icons[user_turn]}")
-print(f"Opponent: {icons[comp_turn]}")
-if (user_turn == 0 and comp_turn == 2) or (user_turn == 2 and comp_turn == 1) or (user_turn == 1 and comp_turn == 0):
-    print("You Win!")
-elif (user_turn == comp_turn):
-    print("It's a Draw")
-else:
-    print("You Lose!")
+# import random
+# print("Let's play Rock, Paper, Scissors")
+# icons = ["🥌", "🧻", "✂"]
+# user_turn = int(input("Rock = 0 | Paper = 1 | Scissors = 2\n"))
+# comp_turn = random.randint(0, 2)
+# print(f"You: {icons[user_turn]}")
+# print(f"Opponent: {icons[comp_turn]}")
+# if (user_turn == 0 and comp_turn == 2) or (user_turn == 2 and comp_turn == 1) or (user_turn == 1 and comp_turn == 0):
+#     print("You Win!")
+# elif (user_turn == comp_turn):
+#     print("It's a Draw")
+# else:
+#     print("You Lose!")
+
+# ------------------
+
+high_score = 0
+score_input = input(
+    "Enter some scores (single space between them)\n").split(" ")
+scores = [int(string) for string in score_input]
+# SCORES = [78, 65, 89, 55, 91, 64, 89]
+# for score in SCORES:
+for score in scores:
+    if (score > high_score):
+        high_score = score
+print(f"The highest score of the class is: {high_score}")
 
 
+# ------------------
+
+# import random
+# import re
+# print("Welcome to the password generator!")
+# letters = input("How many letters would you like in your password?\n")
+# symbols = input("How many symbols would you like?\n")
+# numbers = input("How many numbers would you like?\n")
+
+
+# # r'\W+'
+# # SYMBOL_LIST = re
+# SYMBOL_LIST = ["~", "!", "@", "#", "$", "%", "^", "&", "*",
+#                "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", "|", ";", ":", "<", ">", ".", "/", "?"]
+# # print(SYMBOL_LIST)
+# NUMBER_LIST = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# password = ""
+
+# print(f"Here is your password:\n{password}")
+
+
+# ------------------
+# ------------------
+# ------------------
+# ------------------
+# ------------------
+# ------------------
+# ------------------
+# ------------------
+# ------------------
+# ------------------
+# ------------------
+# ------------------
+# ------------------
+# ------------------
 # ------------------
 # ------------------
