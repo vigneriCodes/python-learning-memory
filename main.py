@@ -254,40 +254,46 @@
 
 # ------------------
 
-print("Welcome to FIZZBUZZ!")
+# print("Welcome to FIZZBUZZ!")
 
-for number in range(1, 101):
-    if (number % 3 == 0) and (number % 5 == 0):
-        print("FizzBuzz")
-    elif (number % 5 == 0):
-        print("Buzz")
-    elif (number % 3 == 0):
-        print("Fizz")
-    else:
-        print(number)
+# for number in range(1, 101):
+#     if (number % 3 == 0) and (number % 5 == 0):
+#         print("FizzBuzz")
+#     elif (number % 5 == 0):
+#         print("Buzz")
+#     elif (number % 3 == 0):
+#         print("Fizz")
+#     else:
+#         print(number)
 
 
 # ------------------
 
-# import random
-# import re
-# print("Welcome to the password generator!")
-# letters = input("How many letters would you like in your password?\n")
-# symbols = input("How many symbols would you like?\n")
-# numbers = input("How many numbers would you like?\n")
+import random
+print("Welcome to the py_password generator!")
+user_letter_amt = int(
+    input("How many letters would you like in your password?\n"))
+user_symbol_amt = int(input("How many symbols would you like?\n"))
+user_number_amt = int(input("How many numbers would you like?\n"))
+LETTERS_LIST = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+                'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+SYMBOLS_LIST = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+NUMBERS_LIST = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 
-# # r'\W+'
-# # SYMBOL_LIST = re
-# SYMBOL_LIST = ["~", "!", "@", "#", "$", "%", "^", "&", "*",
-#                "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", "|", ";", ":", "<", ">", ".", "/", "?"]
-# # print(SYMBOL_LIST)
-# NUMBER_LIST = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+def get_chars(user_input, chars_list, output_list):
+    for number in range(1, (user_input + 1)):
+        rand_index = random.randint(0, (len(chars_list) - 1))
+        output_list.append(chars_list[rand_index])
 
-# password = ""
 
-# print(f"Here is your password:\n{password}")
-
+all_chars = []
+get_chars(user_letter_amt, LETTERS_LIST, all_chars)
+get_chars(user_symbol_amt, SYMBOLS_LIST, all_chars)
+get_chars(user_number_amt, NUMBERS_LIST, all_chars)
+random.shuffle(all_chars)
+password = str.join("", all_chars)
+print(f"Here is your password:\n{password}")
 
 # ------------------
 # ------------------
