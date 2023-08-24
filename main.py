@@ -246,11 +246,26 @@
 #     sum += number
 # print(sum)
 
-sum = 0
+# sum = 0
+# for number in range(1, 101):
+#     if (number % 2 == 0):
+#         sum += number
+# print(sum)
+
+# ------------------
+
+print("Welcome to FIZZBUZZ!")
+
 for number in range(1, 101):
-    if (number % 2 == 0):
-        sum += number
-print(sum)
+    if (number % 3 == 0) and (number % 5 == 0):
+        print("FizzBuzz")
+    elif (number % 5 == 0):
+        print("Buzz")
+    elif (number % 3 == 0):
+        print("Fizz")
+    else:
+        print(number)
+
 
 # ------------------
 
